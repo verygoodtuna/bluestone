@@ -9,6 +9,19 @@ fbg #41464e
 yellow #f2c81f
 puple #e7e7fd
 
+xi-arrow-right
+xi-arrow-up
+xi-cart-o
+xi-lock-o
+xi-profile-o
+xi-angle-right-min
+xi-angle-left-min
+xi-play
+xi-pause
+
+
+$color-
+
 header_
 로고
 
@@ -23,8 +36,9 @@ header_
 고객센터-
 공지사항
 문의게시판
-비회원주문조회-
+-
 마이 페이지
+
 
 (자물쇠아이콘) 로그인
 (사람아이콘) 회원가입
