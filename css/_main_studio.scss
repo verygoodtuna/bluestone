@@ -1,8 +1,15 @@
 .main_studio {
     background: $color-dblue;
-    height: calc(100vh - 100px);
 
     .inner {
+        height: calc(100vh - 120px);
+        position: relative;
+
+        .tit {
+            @include inner ();
+            @include position_center ();
+            text-align: center;
+        }
 
         .stone_box {
 
