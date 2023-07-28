@@ -5,6 +5,20 @@
         height: calc(100vh - 120px);
         position: relative;
 
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -28px;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            width: 240px;
+            height: 28px;
+
+            background: url(../imges/bg_scroll.png);
+        }
+
+
         .tit {
             @include inner ();
             @include position_center ();

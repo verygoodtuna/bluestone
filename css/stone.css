@@ -23,6 +23,7 @@ a {
 
 body {
   line-height: 1;
+  background: #faf6ee;
 }
 
 img {
@@ -53,6 +54,19 @@ img {
   z-index: 999;
   height: 100px;
   background: transparent;
+  transition: 0.5s;
+}
+.header.on {
+  background: #fff;
+}
+.header.on .h_con .logo {
+  background: url(../imges/logo.svg) no-repeat center center/cover;
+}
+.header.on .h_con .gnb {
+  color: #11132a;
+}
+.header.on .h_con .customer {
+  color: #11132a;
 }
 .header .h_con {
   position: relative;
@@ -63,7 +77,7 @@ img {
   top: 50%;
   left: 100px;
   transform: translate(0, -50%);
-  background: url(../imges/logo.svg) no-repeat center center/cover;
+  background: url(../imges/logo_wt.svg) no-repeat center center/cover;
   height: 60px;
   width: 298px;
 }
@@ -71,6 +85,7 @@ img {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
+  color: #fff;
 }
 .header .h_con .gnb ul {
   display: flex;
@@ -87,6 +102,7 @@ img {
 .header .h_con .customer {
   position: absolute;
   right: 100px;
+  color: #fff;
 }
 .header .h_con .customer ul {
   display: flex;
@@ -104,6 +120,16 @@ img {
 .main_studio .inner {
   height: calc(100vh - 120px);
   position: relative;
+}
+.main_studio .inner::before {
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 240px;
+  height: 28px;
+  background: url(../imges/bg_scroll.png);
 }
 .main_studio .inner .tit {
   max-width: 1600px;
