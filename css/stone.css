@@ -52,7 +52,7 @@ img {
   right: 0;
   z-index: 999;
   height: 100px;
-  background: #fff;
+  background: transparent;
 }
 .header .h_con {
   position: relative;
@@ -100,6 +100,7 @@ img {
 
 .main_studio {
   background: #035ac7;
+  height: calc(100vh - 100px);
 }
 .main_studio .inner .stone_box .stone {
   position: absolute;
