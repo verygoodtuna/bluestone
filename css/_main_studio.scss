@@ -2,7 +2,7 @@
     background: $color-dblue;
 
     .inner {
-        height: calc(100vh - 120px);
+        height: calc(100vh - 100px);
         position: relative;
 
         &::before {
@@ -11,7 +11,8 @@
             bottom: -28px;
             left: 50%;
             transform: translate(-50%, 0);
-
+            z-index: 5;
+            
             width: 240px;
             height: 28px;
 
@@ -23,18 +24,195 @@
             @include inner ();
             @include position_center ();
             text-align: center;
+            z-index: 998;
+
+            h2 {
+                font-size: 64px;
+                font-weight: 700;
+                line-height: 74px;
+                color: $color-white;
+                margin: 0 0 16px 0;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                color: rgba(255,255,255,0.9);
+                line-height: 28px;
+            }
         }
 
         .stone_box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+
+            z-index: 3;
 
             .stone {
                 position: absolute;
+                z-index: 998;
+                width: 100px;
+                height: 100px;
+            }
+
+            .stone01 {
+                width: 150px;
+                height: 70px;
+                top: 58%;
+                left: 0;
+                transform: translate(-50%, -50%);
+                animation: bingle 2s infinite alternate;
+            }
+
+            .stone02 {
+                width: 100px;
+                height: 100px;
+                top: 30%;
+                left: 14%;
+                transform: translate(-50%, -50%);
+                animation: bingle 2s infinite alternate;
+            }
+
+            .stone03 {
+                width: 150px;
+                height: 100px;
+                top: 78%;
+                left: 26%;
+                transform: translate(-50%, -50%);
+                animation: bingle 2s infinite alternate;
+            }
+
+            .stone04 {
                 width: 150px;
                 height: 150px;
+                top: 20%;
+                right: 25%;
+                transform: translate(-50%, -50%);
+                animation: bingle 2s infinite alternate;
+            }
 
+            .stone05 {
+                width: 150px;
+                height: 130px;
+                top: 70%;
+                right: 18.5%;
+                transform: translate(-50%, -50%);
+                animation: bingle 2s infinite alternate;
+            }
+
+            .stone06 {
+                width: 60px;
+                height: 60px;
+                top: 36%;
+                right: 8%;
+                transform: translate(-50%, -50%);
+                animation: bingle 2s infinite alternate;
+            }
+
+            .stone07 {
+                width: 50px;
+                height: 50px;
+                top: 60%;
+                right: 2%;
+                transform: translate(-50%, -50%);
+                animation: bingle 2s infinite alternate;
+            }
+
+            @keyframes bingle {
+                0% {
+                    transform: rotate(-1deg);
+                }
+                25% {
+                    transform: rotate(1deg);
+                }
+                50% {
+                    transform: rotate(-2deg);
+                }
+                75% {
+                    transform: rotate(2deg);
+                }
+                100% {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+
+        .scroll {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 240px;
+    
+            &::before {
+                content:"";
+                position: absolute;
+                bottom: -70px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                background: rgba(255,255,255,1);
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+    
+            span {
+                font-size: 12px;
+                font-weight: 400;
+                color: rgba(255,255,255,0.8);
+                display: block;
+                text-align: center;
+
+                &::before {
+                    content:"";
+                    position: absolute;
+                    bottom: -60px;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    background: transparent;
+                    border: 3px solid $color-dblue;
+                    width: 20px;
+                    height: 32px;
+                    border-radius: 50px;
+                }
+
+                &::after {
+                    content:"";
+                    position: absolute;
+                    bottom: -40px;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    background: $color-dblue;
+                    width: 3px;
+                    height: 8px;
+                    border-radius: 50px;
+
+                    animation: scroll 2s infinite;
+                }
+
+                @keyframes scroll {
+                    0% {
+                        bottom: -40px;
+                    }
+
+                    50% {
+                        bottom: -50px;
+                    }
+
+                    100% {
+                        bottom: -40px;
+                    }
+                }
             }
         }
     }
+
+    
 
     .line {
         position: absolute;
@@ -45,16 +223,12 @@
         width: 100%;
         height: 100%;
         display: flex;
-        z-index: -1;
+        z-index: 1;
 
         i {
             position: relative;
             width: calc(100% / 9);
             height: 100%;
-            
-            &:nth-child(odd) {
-                animation: line-animation 3s cubic-bezier(0.2, 0, 0.2, 1) both;
-            }
 
             &::before {
                 content: '';
@@ -66,5 +240,30 @@
                 background: rgba(255,255,255,0.15);
             }
         }
+
+        i:nth-child(odd) {
+            animation: line 3s cubic-bezier(0.2, 0, 0.2, 1) both;
+        }
+
+        i:nth-child(even)::before {
+            animation: line 3s cubic-bezier(0.2, 0, 0.2, 1) both;
+            top: unset;
+            bottom: 0;
+            height: 0;
+        }
+
+        @keyframes line {
+            0% {
+                filter: Alpha(opacity=0);
+                height: 0%;
+            }
+
+            100% {
+                filter: Alpha(opacity=100);
+                height: 100%;
+            }
+        }
+
+     
     }
 }
