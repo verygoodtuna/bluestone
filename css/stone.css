@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;300;400;500;600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
 @import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
 * {
@@ -8,7 +8,7 @@
   font-size: inherit;
   font-weight: inherit;
   word-break: keep-all;
-  font-family: "Noto Sans", "NanumSquare", "Roboto", sans-serif;
+  font-family: "Montserrat", "Noto Sans KR", "NanumSquare", sans-serif;
 }
 
 ul,
@@ -59,10 +59,12 @@ img {
   z-index: 999;
   height: 100px;
   background: transparent;
+  font-family: "NanumSquare", sans-serif;
   transition: 0.5s;
 }
 .header.on {
   background: #fff;
+  border-bottom: 1px solid #ddd;
 }
 .header.on .h_inner .logo {
   background: url(../imges/logo.svg) no-repeat center center/cover;
@@ -370,7 +372,7 @@ img {
 .main_about {
   background: #faf6ee;
   position: relative;
-  padding: 200px 0;
+  padding: 200px 0 100px 0;
 }
 .main_about .inner {
   display: flex;
@@ -407,7 +409,7 @@ img {
 }
 .main_about .inner .tit p {
   font-size: 26px;
-  font-weight: 900;
+  font-weight: 700;
   padding: 0 0 0 30px;
   line-height: 36px;
   margin: 0 0 30px 0;
@@ -430,8 +432,8 @@ img {
 }
 .main_about .inner .img_box .people {
   position: absolute;
-  top: 10%;
-  right: 20%;
+  top: 18%;
+  right: 16%;
   transform: translate(0, -50%);
   height: 300px;
 }
@@ -454,14 +456,16 @@ img {
 }
 .main_about .inner .more .txt span {
   display: block;
+  font-size: 24px;
+  font-weight: 500;
   color: #fff;
-  padding: 0;
-  margin: 0;
+  margin: 0 0 5px 0;
 }
 .main_about .inner .more .txt strong {
+  font-size: 16px;
+  font-weight: 500;
   color: #fff;
   white-space: nowrap;
-  padding: 0;
 }
 
 .main_goods {
@@ -470,4 +474,177 @@ img {
 .main_goods .inner {
   background: #e7e7fd;
   border-radius: 50px;
+  padding: 100px 50px 100px 170px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_goods .inner .txt ul {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 50px 0;
+}
+.main_goods .inner .txt ul li {
+  font-size: 16px;
+  font-weight: 500;
+  color: #3232c8;
+  padding: 8px 16px;
+  background: #fff;
+  border-radius: 50px;
+}
+.main_goods .inner .txt h3 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 0 0 36px 0;
+}
+.main_goods .inner .txt p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  margin: 0 0 70px 0;
+}
+.main_goods .inner .txt span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.main_goods .inner .img_box {
+  border-radius: 300px;
+  overflow: hidden;
+  display: flex;
+  height: 600px;
+}
+.main_goods .inner .obj_box .obj {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+}
+.main_goods .inner .obj_box .obj_00 {
+  left: 5%;
+}
+.main_goods .inner .obj_box .obj_01 {
+  top: 32%;
+  left: 55%;
+}
+.main_goods .inner .obj_box .obj_02 {
+  top: 55%;
+  left: 55%;
+}
+.main_goods .inner .obj_box .obj_03 {
+  top: 70%;
+  left: 88%;
+}
+.main_goods .inner .obj_box .obj_04 {
+  border-radius: 0;
+  top: 54%;
+  left: 90%;
+}
+
+.main_art .inner {
+  display: flex;
+  gap: 75px;
+}
+.main_art .inner img {
+  height: 550px;
+  width: 100%;
+}
+.main_art .inner .artist {
+  flex: 1;
+}
+.main_art .inner .artist img {
+  border-radius: 50px;
+  margin: 0 0 50px 0;
+}
+.main_art .inner .txt {
+  padding: 0 0 0 50px;
+  position: relative;
+}
+.main_art .inner .txt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 1px;
+  height: 180px;
+  background: #ddd;
+}
+.main_art .inner .txt strong {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(101, 101, 101, 0.7);
+  display: block;
+  margin: 0 0 30px 0;
+}
+.main_art .inner .txt h3 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 36px;
+  margin: 0 0 16px 0;
+}
+.main_art .inner .txt h3 i {
+  color: #035ac7;
+  font-style: normal;
+}
+.main_art .inner .txt p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  color: rgba(101, 101, 101, 0.9);
+  margin: 0 0 50px 0;
+}
+.main_art .inner .txt a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background: #01babd;
+  border-radius: 50px;
+  padding: 15px 30px;
+  line-height: 50px;
+}
+.main_art .inner .txt a i {
+  vertical-align: -1px;
+  margin: 0 0 0 5px;
+}
+.main_art .inner .portfolio {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.main_art .inner .portfolio .p_slide {
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 0 0 50px 0;
+}
+.main_art .inner .portfolio .slide_btn {
+  display: flex;
+  gap: 5px;
+  background: #01babd;
+  border-radius: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 62%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+.main_art .inner .portfolio .slide_btn li {
+  color: #01babd;
+  background: #fff;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+}
+.main_art .inner .portfolio .slide_btn li i {
+  font-size: 18px;
+  font-weight: 700;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.main_together .inner {
+  text-align: center;
 }/*# sourceMappingURL=stone.css.map */

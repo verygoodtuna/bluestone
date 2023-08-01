@@ -9,5 +9,14 @@ $(function () {
 
     $('.p_slide').slick({
         arrows: false,
-    })
+        fade: true,
+    });
+
+    $('.portfolio .slide_btn .left').on('click', function () {
+        $('.p_slide').slick('slickPrev');
+    });
+
+    $('.portfolio .slide_btn .right').on('click', function () {
+        $('.p_slide').slick('slickNext');
+    });
 })
