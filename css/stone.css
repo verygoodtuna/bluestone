@@ -474,7 +474,7 @@ img {
 .main_goods .inner {
   background: #e7e7fd;
   border-radius: 50px;
-  padding: 100px 50px 100px 170px;
+  padding: 75px 50px 75px 170px;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -543,6 +543,9 @@ img {
   left: 90%;
 }
 
+.main_art {
+  background: #fefcfa;
+}
 .main_art .inner {
   display: flex;
   gap: 75px;
@@ -645,6 +648,30 @@ img {
   text-align: center;
 }
 
-.main_together .inner {
+.main_together .inner .img_box {
+  width: 265px;
+  margin: 0 auto 42px auto;
+}
+.main_together .inner .txt {
   text-align: center;
+}
+.main_together .inner .txt h3 {
+  font-size: 70px;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+}
+.main_together .inner .txt p {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(101, 101, 101, 0.8);
+  margin: 0 0 100px 0;
+}
+.main_together .inner .txt span {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(101, 101, 101);
+}
+
+.footer {
+  background: #41464e;
 }/*# sourceMappingURL=stone.css.map */

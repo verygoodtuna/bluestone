@@ -1,5 +1,31 @@
 .main_together {
     .inner {
-        text-align: center;
+        .img_box {
+            width: 265px;
+            margin: 0 auto 42px auto;
+        }
+
+        .txt {
+            text-align: center;
+
+            h3 {
+                font-size: 70px;
+                font-weight: 700;
+                margin: 0 0 24px 0;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 500;
+                color: rgba(101, 101, 101, 0.8);
+                margin: 0 0 100px 0;
+            }
+
+            span {
+                font-size: 14px;
+                font-weight: 500;
+                color: rgba(101, 101, 101, 1);
+            }
+        }
     }
 }
