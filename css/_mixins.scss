@@ -13,3 +13,11 @@ $size-gap : 30px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin res () {
+    @if($s== s) {
+        @media(max-width: 768px) {
+            @content;
+        }
+    }
+}

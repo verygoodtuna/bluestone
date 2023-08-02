@@ -36,14 +36,53 @@
 
             p {
                 font-size: 20px;
-                font-weight: 500;
-                line-height: 30px;
+                font-weight: 400;
+                color: #3e4b74;
+                line-height: 26px;
                 margin: 0 0 70px 0;
             }
 
             span {
-                font-size: 16px;
+                font-size: 18px;
                 font-weight: 400;
+                position: relative;
+                display: block;
+                cursor: pointer;
+
+                &:hover::before {
+                    left: 30%;
+                }
+
+                &:hover::after {
+                    left: 41.5%;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 79%;
+                    left: 25%;
+
+                    width: 70px;
+                    height: 1px;
+                    background: $color-black;
+
+                    transition: 0.5s;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 53%;
+                    left: 36.5%;
+
+                    width: 12px;
+                    height: 1px;
+                    transform: rotate(45deg);
+                    background: $color-black;
+
+                    transition: 0.5s;
+                }
             }
         }
 
@@ -69,12 +108,12 @@
 
             .obj_01 {
                 top: 32%;
-                left: 55%;
+                left: 57%;
             }
 
             .obj_02 {
-                top: 55%;
-                left: 55%;
+                top: 58%;
+                left: 53%;
             }
 
             .obj_03 {
@@ -84,8 +123,8 @@
 
             .obj_04 {
                 border-radius: 0;
-                top: 54%;
-                left: 90%;
+                top: 53%;
+                left: 88%;
             }
         }
     }

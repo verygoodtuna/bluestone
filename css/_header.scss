@@ -15,6 +15,7 @@
         border-bottom: 1px solid #ddd;
         
         .h_inner {
+
             .logo {
                 background: url(../imges/logo.svg)no-repeat center center/cover;
             }
@@ -58,10 +59,10 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                gap: 50px;
+                gap: 60px;
                 
                 li {
-                    font-size: 16px;
+                    font-size: 18px;
                     font-weight: 400;
 
                     a {

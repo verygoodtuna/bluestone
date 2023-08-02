@@ -1,3 +1,71 @@
 .footer {
     background: $color-fbg;
+    padding: 50px 0;
+
+    .inner {
+        .f_top {
+            position: relative;
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+            img {
+                width: 300px;
+                margin: 0 0 32px 0;
+            }
+
+            .address {
+                display: block;
+                margin: 0 0 15px 0;
+                font-size: 14px;
+                font-weight: 400;
+                color: rgba(255, 255, 255, 0.9);
+            }
+
+            ul {
+                display: flex;
+                gap: 20px;
+                margin: 0 0 15px 0;
+
+                li {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: rgba(255, 255, 255, 0.9);
+                }
+            }
+
+            .link {
+                position: absolute;
+                top: 30px;
+                right: 0;
+                flex-direction: column;
+                text-align: right;
+            }
+        }
+
+        .f_bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0 0 0;
+
+            .copy {
+                font-size: 14px;
+                font-weight: 400;
+                color: rgba(255, 255, 255, 0.9);
+            }
+
+            ul {
+                float: right;
+
+                li {
+                    display:inline-block;
+                    margin: 0 0 0 20px;
+
+                    img {
+                        height: 54px;
+                    }
+                }
+            }
+        }
+    }
 }
