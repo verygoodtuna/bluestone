@@ -7,6 +7,10 @@ $(function () {
             : $('.header').removeClass('on');
     });
 
+    $('header .mobile_btn').on('click', function () {
+        $('header .mobile_btn').toggleClass('on');
+    })
+
     $('.p_slide').slick({
         arrows: false,
         fade: true,

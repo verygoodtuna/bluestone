@@ -32,6 +32,34 @@
                 color: $color-black;
             }
         }
+
+        .mobile_btn {
+            &::before {
+                background: $color-black;
+            }
+
+            &.on::before {
+                display: none;
+            }
+
+            &.on span::before {
+                transform: rotateZ(-20deg);
+            }
+
+            &.on span::after {
+                transform: rotateZ(20deg);
+            }
+
+            span {
+                &::before {
+                    background: $color-black;
+                }
+
+                &::after {
+                    background: $color-black;
+                }
+            }
+        }
     }
 
     .h_inner {
@@ -100,6 +128,101 @@
                     }
                 }
             }
+        }
+    }
+
+    .mobile_btn {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translate(0, -50%);
+
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border-radius: 5px;
+
+        display: none;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 30px;
+            height: 2px;
+            background: $color-white;
+           
+            transition: 0.5s;
+        }
+
+        span {
+            display: block;
+            width: 30px;
+            height: 30px;
+
+            color: transparent;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                width: 30px;
+                height: 2px;
+                background: $color-white;
+                z-index: 999;
+
+                transition: 0.5s;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                width: 30px;
+                height: 2px;
+                background: $color-white;
+                z-index: 999;
+
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .header {
+        height: 60px;
+
+        .h_inner {
+            .logo {
+                width: 150px;
+                height: 30px;
+                left: 20px;
+            }
+
+            .gnb {
+                display: none;
+            }
+
+            .customer {
+                display: none;
+            }
+        }
+
+        .mobile_btn {
+            display: block;
         }
     }
 }

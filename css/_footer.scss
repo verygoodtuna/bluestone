@@ -30,6 +30,22 @@
                     font-size: 14px;
                     font-weight: 400;
                     color: rgba(255, 255, 255, 0.9);
+                    position: relative;
+
+                    span {
+                        font-weight: 700;
+                    }
+                }
+
+                li~li::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: -10px;
+                    transform: translate(0, -50%);
+                    width: 1px;
+                    height: 10px;
+                    background: rgba(255, 255, 255, 0.3);
                 }
             }
 
@@ -39,6 +55,10 @@
                 right: 0;
                 flex-direction: column;
                 text-align: right;
+
+                li~li::before {
+                    display: none;
+                }
             }
         }
 
