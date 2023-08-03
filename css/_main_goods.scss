@@ -129,3 +129,23 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .main_goods {
+        .inner {
+            .txt {
+
+            }
+            
+            .img_box {
+
+            }
+
+            .obj_box {
+                .obj_03 {
+                    left: 50%;
+                }
+            }
+        }
+    }
+}

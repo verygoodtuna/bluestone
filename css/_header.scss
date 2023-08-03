@@ -38,18 +38,6 @@
                 background: $color-black;
             }
 
-            &.on::before {
-                display: none;
-            }
-
-            &.on span::before {
-                transform: rotateZ(-20deg);
-            }
-
-            &.on span::after {
-                transform: rotateZ(20deg);
-            }
-
             span {
                 &::before {
                     background: $color-black;
@@ -147,15 +135,15 @@
         &::before {
             content: "";
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 43%;
+            left: 0;
+            transform: translate(0, -50%);
 
             width: 30px;
             height: 2px;
             background: $color-white;
            
-            transition: 0.5s;
+            transition: 0.3s;
         }
 
         span {
@@ -168,24 +156,24 @@
             &::before {
                 content: "";
                 position: absolute;
-                top: 20%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                top: 10%;
+                left: 0;
+                //transform: translate(-50%, -50%);
 
                 width: 30px;
                 height: 2px;
                 background: $color-white;
                 z-index: 999;
 
-                transition: 0.5s;
+                transition: 0.3s;
             }
 
             &::after {
                 content: "";
                 position: absolute;
-                top: 80%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                top: 70%;
+                left: 0;
+                //transform: translate(-50%, -50%);
 
                 width: 30px;
                 height: 2px;
@@ -199,9 +187,6 @@
 }
 
 @media(max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
     .header {
         height: 60px;
 
@@ -223,6 +208,20 @@
 
         .mobile_btn {
             display: block;
+            z-index: 999;
+
+            &.on::before {
+                background: transparent;
+                left: -20px;
+            }
+
+            &.on span::before {
+                transform: translateY(9px) rotate(45deg);
+            }
+
+            &.on span::after {
+                transform: translateY(-9px) rotate(-45deg);
+            }
         }
     }
 }

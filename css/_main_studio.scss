@@ -1,10 +1,9 @@
 .main_studio {
     background: $color-dblue;
+    height: calc(100vh - 100px);
+    position: relative;
 
     .inner {
-        height: calc(100vh - 100px);
-        position: relative;
-
         &::before {
             content: "";
             position: absolute;
@@ -270,6 +269,90 @@
 
 @media(max-width: 768px) {
     .main_studio {
-        display: none;
+        height: 430px;
+        .inner {
+            &::before {
+                z-index: 1;
+            }
+            .tit {
+                width: 90%;
+                padding: 0;
+
+                h2 {
+                    font-size: 24px;
+                    line-height: 34px;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 22px;
+                    word-break: break-all;
+                    padding: 0 8px;
+                }
+            }
+            .stone_box {
+
+                .stone {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+            .scroll {
+                z-index: 5;
+    
+                &::before {
+                    bottom: -50px;
+                    left: 51%;
+                    width: 40px;
+                    height: 40px;
+                }
+
+                span {
+                    &::before {
+                        bottom: -47px;
+                        left: 51%;
+                        width: 15px;
+                        height: 25px;
+                    }
+
+                    &::after {
+                        left: 51%;
+                        bottom: -30px;
+                        animation: scroll2 2s infinite;
+                    }
+
+                    @keyframes scroll2 {
+                        0% {
+                            bottom: -30px;
+                        }
+    
+                        50% {
+                            bottom: -35px;
+                        }
+    
+                        100% {
+                            bottom: -30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .line {
+            i {
+                width: calc(100% / 4);
+            }
+
+            i:nth-child(4),
+            i:nth-child(5), 
+            i:nth-child(6), 
+            i:nth-child(7), 
+            i:nth-child(8) {
+                display: none;
+            }
+        }
+
+        
     }
 }
