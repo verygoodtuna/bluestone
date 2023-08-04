@@ -295,6 +295,9 @@ img {
     justify-content: space-between;
     align-items: center;
   }
+  .header .h_inner .gnb ul li a i {
+    display: block;
+  }
   .header .h_inner .gnb.on {
     display: block;
   }
@@ -597,7 +600,7 @@ img {
     width: 60px;
     height: 60px;
     top: 16%;
-    left: 21%;
+    right: 21%;
   }
   .main_studio .inner .stone_box .stone05 {
     width: 40px;
@@ -1026,12 +1029,12 @@ img {
   }
   .main_goods .inner .txt span::before {
     width: 40px;
-    left: 33%;
+    left: 25%;
   }
   .main_goods .inner .txt span::after {
     width: 8px;
     top: 54%;
-    left: 44%;
+    left: 33.5%;
   }
   .main_goods .inner .img_box {
     width: 200px;
