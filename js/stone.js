@@ -9,7 +9,18 @@ $(function () {
 
     $('header .mobile_btn').on('click', function () {
         $('header .mobile_btn').toggleClass('on');
-    })
+        $('header .gnb').toggleClass('on');
+        $('header .moblie_customer').toggleClass('on');
+    });
+
+    $('.gnb').on('wheel', function (e) {
+        if ($('.gnb .lnb').hasClass('on')) {
+          e.preventDefault();
+        }
+        else {
+            e.preventDefault();
+        }
+    });
 
     $('.p_slide').slick({
         arrows: false,

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;300;400;500;700;900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
 @import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
 * {
@@ -8,7 +8,7 @@
   font-size: inherit;
   font-weight: inherit;
   word-break: keep-all;
-  font-family: "Montserrat", "Noto Sans KR", "NanumSquare", sans-serif;
+  font-family: "Noto Sans", "Noto Sans KR", "NanumSquare", sans-serif;
 }
 
 ul,
@@ -97,6 +97,49 @@ img {
   height: 60px;
   width: 298px;
 }
+.header .h_inner .moblie_customer {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate(0, -50%);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  opacity: 0;
+  visibility: hidden;
+}
+.header .h_inner .moblie_customer .cart_btn {
+  background: #fff;
+  border-radius: 50px;
+  padding: 6px 16px;
+  display: block;
+  width: 110px;
+  line-height: 16px;
+  margin: 0;
+}
+.header .h_inner .moblie_customer .cart_btn i {
+  font-size: 20px;
+  font-weight: 400;
+  color: #0054a7;
+  vertical-align: middle;
+}
+.header .h_inner .moblie_customer .cart_btn span {
+  font-size: 14px;
+  font-weight: 900;
+  color: #003c86;
+  font-family: "NanumSquare";
+}
+.header .h_inner .moblie_customer .login {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  font-family: "NanumSquare";
+}
+.header .h_inner .moblie_customer.on {
+  opacity: 1;
+  visibility: visible;
+}
 .header .h_inner .gnb {
   position: absolute;
   left: 50%;
@@ -110,11 +153,14 @@ img {
   gap: 60px;
 }
 .header .h_inner .gnb ul li {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 }
 .header .h_inner .gnb ul li a {
   line-height: 100px;
+}
+.header .h_inner .gnb ul li a .plus {
+  display: none;
 }
 .header .h_inner .gnb ul li .lnb {
   display: none;
@@ -144,7 +190,7 @@ img {
 .header .mobile_btn {
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 30px;
   transform: translate(0, -50%);
   width: 30px;
   height: 30px;
@@ -194,7 +240,7 @@ img {
 
 @media (max-width: 768px) {
   .header {
-    height: 60px;
+    height: 80px;
   }
   .header .h_inner .logo {
     width: 150px;
@@ -203,6 +249,54 @@ img {
   }
   .header .h_inner .gnb {
     display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: #0160ae;
+    padding: 130px 30px 0 30px;
+    transition: 0.5s;
+  }
+  .header .h_inner .gnb::before {
+    content: "";
+    position: absolute;
+    bottom: 60px;
+    left: -50px;
+    width: 450px;
+    height: 350px;
+    background: url(../imges/sub_rock.svg) no-repeat center;
+    opacity: 0.08;
+  }
+  .header .h_inner .gnb::after {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .header .h_inner .gnb ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .header .h_inner .gnb ul li {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
+  }
+  .header .h_inner .gnb ul li a {
+    line-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .h_inner .gnb.on {
+    display: block;
   }
   .header .h_inner .customer {
     display: none;
@@ -213,7 +307,7 @@ img {
   }
   .header .mobile_btn.on::before {
     background: transparent;
-    left: -20px;
+    left: -30px;
   }
   .header .mobile_btn.on span::before {
     transform: translateY(9px) rotate(45deg);
@@ -480,6 +574,46 @@ img {
   .main_studio .inner .stone_box .stone {
     width: 50px;
     height: 50px;
+  }
+  .main_studio .inner .stone_box .stone01 {
+    width: 25px;
+    height: 25px;
+    top: 64%;
+    left: 4%;
+  }
+  .main_studio .inner .stone_box .stone02 {
+    width: 35px;
+    height: 35px;
+    top: 27%;
+    left: 20%;
+  }
+  .main_studio .inner .stone_box .stone03 {
+    width: 60px;
+    height: 60px;
+    top: 76%;
+    left: 20%;
+  }
+  .main_studio .inner .stone_box .stone04 {
+    width: 60px;
+    height: 60px;
+    top: 16%;
+    left: 21%;
+  }
+  .main_studio .inner .stone_box .stone05 {
+    width: 40px;
+    height: 40px;
+  }
+  .main_studio .inner .stone_box .stone06 {
+    width: 20px;
+    height: 20px;
+    top: 30%;
+    right: 10%;
+  }
+  .main_studio .inner .stone_box .stone07 {
+    width: 20px;
+    height: 20px;
+    top: 64%;
+    right: 7%;
   }
   .main_studio .inner .scroll {
     z-index: 5;
@@ -949,7 +1083,7 @@ img {
   margin: 0 0 50px 0;
 }
 .main_art .inner .txt {
-  padding: 0 0 0 50px;
+  padding: 0 0 0 36px;
   position: relative;
 }
 .main_art .inner .txt::before {
@@ -983,8 +1117,7 @@ img {
   font-weight: 300;
   line-height: 22px;
   color: rgba(101, 101, 101, 0.9);
-  margin: 0 0 50px 0;
-  width: 50%;
+  margin: 0 0 30px 0;
   min-height: 66px;
 }
 .main_art .inner .txt a {
@@ -1018,11 +1151,11 @@ img {
   display: flex;
   gap: 5px;
   background: #01babd;
-  border-radius: 25px;
-  padding: 8px 12px;
+  border-radius: 50px;
+  padding: 8px 14px;
   cursor: pointer;
   position: absolute;
-  top: 62%;
+  top: 61%;
   right: 0;
   transform: translate(0, -50%);
 }
@@ -1030,15 +1163,15 @@ img {
   color: #01babd;
   background: #fff;
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
+  width: 44px;
+  height: 44px;
   text-align: center;
 }
 .main_art .inner .portfolio .slide_btn li i {
   font-size: 18px;
   font-weight: 900;
-  width: 35px;
-  line-height: 35px;
+  width: 44px;
+  line-height: 44px;
   text-align: center;
 }
 .main_art .inner .portfolio .slide_btn .pause.on {
@@ -1100,7 +1233,21 @@ img {
     margin: 0 0 26px 0;
   }
   .main_art .inner .portfolio .slide_btn {
+    position: absolute;
     top: 51%;
+    border-radius: 25px;
+    padding: 8px 12px;
+  }
+  .main_art .inner .portfolio .slide_btn li {
+    width: 35px;
+    height: 35px;
+  }
+  .main_art .inner .portfolio .slide_btn li i {
+    font-size: 18px;
+    font-weight: 900;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
   }
 }
 .main_together .inner .img_box {
