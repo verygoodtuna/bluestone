@@ -95,23 +95,27 @@
         padding: 25px 0 50px 0;
         .inner {
             padding: 0 20px;
-            
+
             .f_top {
+                padding: 16px 0 3px 0;
 
                 img {
                     width: auto;
                     height: 30px;    
+                    margin: 0 0 18px 0;
                 }
 
                 .address {
                     font-weight: 300;
+                    font-size: 12px;
                 }
 
                 ul{
                     flex-direction: column;
-                    gap: 12px;
+                    gap: 8px;
 
                     li {
+                        font-size: 12px;
                         font-weight: 300;
 
                         span {
