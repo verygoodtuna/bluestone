@@ -295,7 +295,7 @@ img {
     justify-content: space-between;
     align-items: center;
   }
-  .header .h_inner .gnb ul li a i {
+  .header .h_inner .gnb ul li a .plus {
     display: block;
   }
   .header .h_inner .gnb.on {
