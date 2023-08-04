@@ -152,7 +152,8 @@
             gap: 30px;
 
             img {
-                height: 270px;
+                width: 100%;
+                height: 100%;
             }
 
             .artist {
@@ -200,14 +201,19 @@
             }
 
             .portfolio {
-               .p_slide {
+                overflow: hidden;
+
+                .p_slide {
                     border-radius: 25px;
                     margin: 0 0 26px 0;
+
+                    overflow: hidden;
+                    height: 300px;
                 }
 
                 .slide_btn {
                     position: absolute;
-                    top: 51%;
+                    top: 54%;
                     border-radius: 25px;
                     padding: 8px 12px;
 

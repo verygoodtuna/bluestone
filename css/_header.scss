@@ -247,6 +247,34 @@
     .header {
         height: 80px;
 
+        &.on {
+            .h_inner {
+                color: $color-white;
+                .gnb {
+                    ul {
+                        li {
+                            color: $color-white;
+                        }
+                    }
+                }
+
+                .customer {
+                    color: $color-white;
+                }
+            }
+
+            .mobile_btn.on {
+                span {
+                    &::before {
+                        background: $color-white;
+                    }
+                    &::after {
+                        background: $color-white;
+                    }
+                }
+            }
+        }
+
         .h_inner {
 
             .logo {
