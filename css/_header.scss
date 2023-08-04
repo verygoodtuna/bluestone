@@ -69,13 +69,16 @@
             position: absolute;
             top: 50%;
             left: 30px;
+            width: calc(100% - 50px);
             transform: translate(0, -50%);
+            padding: 0 50px 0 0;
 
             z-index: 999;
 
             display: flex;
             align-items: center;
-            gap: 100px;
+            justify-content: space-between;
+            //gap: 100px;
 
             opacity: 0;
             visibility: hidden;
@@ -107,7 +110,7 @@
             }
 
             .login {
-               font-size: 16px;
+               font-size: 14px;
                font-weight: 400;
                color: $color-white;
                font-family: 'NanumSquare';
@@ -361,7 +364,7 @@
 
             &.on::before {
                 background: transparent;
-                left: -30px;
+                right: 30px;
             }
 
             &.on span::before {
