@@ -59,6 +59,8 @@
                 line-height: 22px;
                 color: rgba(101, 101, 101, 0.9);
                 margin: 0 0 50px 0;
+                width: 50%;
+                min-height: 66px;
             }
 
             a {
@@ -146,6 +148,67 @@
 
         .inner {
             flex-direction: column;
+            padding: 0 20px;
+            gap: 30px;
+
+            img {
+                height: 270px;
+            }
+
+            .artist {
+                img {
+                    border-radius: 25px;
+                    margin: 0 0 26px 0;
+                }
+
+                .txt {
+                    p {
+                        min-height: 0;
+                    }
+                }
+            }
+
+            .txt {
+                padding: 0 20px;
+
+                &::before {
+                    display: none;
+                }
+
+                strong { 
+                    font-size: 14px;
+                    margin: 0 0 16px 0;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    line-height: 26px;
+                }
+
+                p {
+                    font-size: 13px;
+                    line-height: 20px;
+                    word-break: break-all;
+                    margin: 0 0 16px 0;
+                    width: 100%;
+                }
+
+                a {
+                    font-size: 14px;
+                    padding: 10px 18px;
+                }
+            }
+
+            .portfolio {
+               .p_slide {
+                    border-radius: 25px;
+                    margin: 0 0 26px 0;
+                }
+
+                .slide_btn {
+                    top: 51%;
+                }
+            }
         }
     }
 }

@@ -5,6 +5,7 @@
 
     .inner {
         display: flex;
+        //align-items: center;
         height: 500px;
         
         .tit {
@@ -46,6 +47,7 @@
                 padding: 0 0 0 30px;
                 line-height: 36px;
                 margin: 0 0 30px 0;
+                width: auto;
             }
 
             strong {
@@ -78,7 +80,7 @@
 
         .more {
             position: absolute;
-            top: 70%;
+            top: 75%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
@@ -179,27 +181,91 @@
         padding: 70px 0;
 
         .inner {
-            flex-direction: column-reverse;
             position: relative;
 
+            .tit {
+                padding: 0 7px;
+                width: 100%;
+
+                &::before {
+                    display: none;
+                }
+
+                h3 {
+                    margin: 0 0 280px 0;
+                    padding: 0;
+                    font-size: 18px;
+                    
+                    
+                    img {
+                        width: 40px;
+                    }
+                }
+
+                span {
+                    padding: 0;
+                    margin: 0 0 16px 0;
+                }
+
+                p {
+                    font-size: 13px;
+                    line-height: 21px;
+                    padding: 0;
+                    margin: 0 0 20px 0;
+                    //word-break: break-all;
+                }
+
+                strong {
+                    padding: 0;
+                    font-size: 16px;
+                }
+            }
+
             .img_box {
-                top: 30%;
+                top: 35%;
                 width:  100%;
                 height: 233px;
                 padding: 0 20px;
 
                 .about_bg {
                     height: 233px;
+                    width: 100%;
                 }
 
                 .people {
-                    top: 50%;
+                    top: 62%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    width: 100%;                    
+                    width: 200px;                    
 
                     img {
                        width: 200px;
+                    }
+                }
+            }
+
+            .more {
+                top: 58%;
+                left: 75%;
+
+                width: 100px;
+                height: 100px;
+
+                &::before {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                .txt {
+                    span {
+                        margin: 0;
+                        i {
+                            font-size: 20px;
+                        }
+                    }
+
+                    strong {
+                        font-size: 12px;
                     }
                 }
             }

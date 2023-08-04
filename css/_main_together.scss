@@ -27,7 +27,7 @@
                 color: rgba(101, 101, 101, 1);
                 padding: 28px 0;
 
-                border-top: 1px solid $color-black;
+                border-top: 1px solid rgba(101, 101, 101, 0.7);
 
                 i {
                     font-size: 24px;
@@ -43,6 +43,44 @@
 
                 &:hover i {
                     background: $color-mint;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main_together {
+        padding: 50px 0;
+
+        .inner {
+            .img_box {
+                width: 200px;
+                margin: 0 auto 24px auto;
+            }
+
+            .txt {
+                h3 {
+                    font-size: 26px;
+                    margin: 0 0 16px 0;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin: 0 0 54px 0;
+                }
+
+                span {
+                    font-size: 14px;
+                    padding: 16px 0;
+                    color: $color-black;
+
+                    i {
+                        font-size: 16px;
+                        padding: 8px;
+                        margin: 0 0 0 64px;
+                    }
                 }
             }
         }
