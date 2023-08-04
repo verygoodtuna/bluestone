@@ -651,10 +651,12 @@ img {
     left: 51%;
     width: 15px;
     height: 25px;
+    border: 2px solid #035ac7;
   }
   .main_studio .inner .scroll span::after {
     left: 51%;
     bottom: -30px;
+    height: 6px;
     animation: scroll2 2s infinite;
   }
   @keyframes scroll2 {

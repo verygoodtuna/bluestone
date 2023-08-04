@@ -369,11 +369,13 @@
                         left: 51%;
                         width: 15px;
                         height: 25px;
+                        border: 2px solid $color-dblue;
                     }
 
                     &::after {
                         left: 51%;
                         bottom: -30px;
+                        height: 6px;
                         animation: scroll2 2s infinite;
                     }
 
