@@ -7,6 +7,14 @@ $(function () {
             : $('.header').removeClass('on');
     });
 
+    $('.header').on('mouseenter', function () {
+        $('.header').addClass('on')
+    })
+
+    $('.header').on('mouseleave', function () {
+        $('.header').removeClass('on');
+    })
+
     $('.gnb ul>li>a').on('click', function (e) {
         if ($('.gnb').hasClass('on')) {
 

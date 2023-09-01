@@ -10,7 +10,8 @@
 
     transition: 0.5s;
     
-    &.on {
+    &.on,
+    &:hover {
         background: $color-white;
 
         
@@ -50,6 +51,7 @@
             }
         }
     }
+
 
     .h_inner {
         position: relative;
@@ -365,6 +367,7 @@
                 }
             }
         }
+
 
         .h_inner {
 
